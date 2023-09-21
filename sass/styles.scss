@@ -1,0 +1,740 @@
+/* 
+    version: 1.0,
+    type: General,
+    author: Tamim Hasan
+    
+*/
+
+@import "./base";
+@import "./utilities";
+@import "./variables";
+// Generel
+
+.close {
+  display: none;
+}
+button,
+input[type="submit"] {
+  cursor: pointer;
+}
+/* =======================================
+                    Header CSS
+============================================*/
+
+header {
+  .container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .logo {
+        width: 244px;
+        height: 33px;
+      }
+      ul {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        li {
+          height: 46px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          a {
+            padding: 0 20px;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 140%; /* 22.4px */
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+          }
+        }
+        .btn-primary {
+          &:hover {
+            transform: var(--scale-back);
+          }
+          transition: transform 0.3s;
+          height: 60px;
+          border-radius: 20px;
+          overflow: hidden;
+          a {
+            display: flex;
+            gap: 10px;
+          }
+        }
+      }
+      .bar {
+        display: none;
+      }
+    }
+    // Hero Area CSS
+    #hero-area {
+      .inner {
+        padding: 80px 0;
+        display: flex;
+        gap: 30px;
+        .hero-content {
+          width: 510px;
+          .highlight {
+            display: none;
+          }
+          .text-content {
+            h1 {
+              font-size: 67px;
+              font-weight: 600;
+              line-height: 110%; /* 73.7px */
+              text-transform: capitalize;
+            }
+            p {
+              font-size: 22px;
+              font-weight: 400;
+              line-height: 160%; /* 35.2px */
+              text-transform: capitalize;
+              margin-top: 20px;
+            }
+            .btn-primary {
+              &:hover {
+                transform: var(--scale-back);
+              }
+              transition: transform 0.3s;
+              display: inline-flex;
+              justify-content: center;
+              align-items: center;
+              gap: 12px;
+              font-weight: 600;
+              height: 60px;
+              padding: 0 50px;
+              border-radius: 20px;
+              margin: 30px 0;
+            }
+          }
+          .info {
+            display: flex;
+            gap: 30px;
+            div {
+              span {
+                font-family: var(--space-font);
+                font-size: 28px;
+                font-weight: 700;
+                line-height: 140%; /* 39.2px */
+                text-transform: capitalize;
+              }
+              p {
+                font-size: 23.99px;
+                font-weight: 400;
+                line-height: 160%; /* 38.384px */
+                text-transform: capitalize;
+              }
+            }
+          }
+        }
+        .highlight {
+          width: 510px;
+          height: 510px;
+          border-radius: 20px;
+          overflow: hidden;
+          a {
+            display: block;
+            width: 100%;
+            .card-image {
+              height: 401px;
+              img {
+                object-fit: cover;
+              }
+            }
+            .meta {
+              background-color: var(--background-secondary);
+              padding: 20px;
+              h3 {
+                font-size: 22px;
+                font-weight: 600;
+                line-height: 140%; /* 30.8px */
+                text-transform: capitalize;
+                margin-bottom: 10px;
+                margin-top: 2px;
+              }
+              div {
+                display: flex;
+                gap: 12px;
+                .avatar {
+                  display: block;
+                  width: 24px;
+                  height: 24px;
+                }
+                span {
+                  line-height: 140%; /* 22.4px */
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* =======================================
+                    Trending CSS
+============================================*/
+
+#trending {
+  .container {
+    .inner {
+      padding: 80px 0;
+      .trending-card-wrapper {
+        margin-top: 60px;
+        display: flex;
+        gap: 30px;
+        div {
+          display: block;
+          width: 330px;
+          .card-images {
+            .main {
+              &:hover {
+                transform: var(--scale-back);
+              }
+              transition: transform 0.3s;
+              cursor: pointer;
+              height: 330px;
+              border-radius: 20px;
+              overflow: hidden;
+            }
+            .secondary {
+              margin-top: 15px;
+              display: flex;
+              gap: 15px;
+              div {
+                &:hover {
+                  transform: var(--scale-back);
+                }
+                transition: transform 0.3s;
+                cursor: pointer;
+                width: 100px;
+                height: 100px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 20px;
+                overflow: hidden;
+                background-color: var(--primary-color);
+                font-family: var(--space-font);
+                font-size: 22px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 160%; /* 35.2px */
+                text-transform: capitalize;
+              }
+            }
+          }
+          .card-details {
+            margin-top: 15px;
+            h3 {
+              font-size: 22px;
+              font-weight: 600;
+              line-height: 140%; /* 30.8px */
+              text-transform: capitalize;
+            }
+            div {
+              display: flex;
+              gap: 12px;
+              margin-top: 10px;
+              .avatar {
+                width: 24px;
+                height: 24px;
+                border-radius: 100px;
+                overflow: hidden;
+              }
+              span {
+                line-height: 140%; /* 22.4px */
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* =======================================
+                    Top creators CSS
+============================================*/
+
+#top-creators {
+  .container {
+    .inner {
+      padding: 80px 0;
+      .section-details {
+        display: flex;
+        justify-content: space-between;
+        .rankings {
+          align-self: flex-end;
+          a {
+            &:hover {
+              transform: var(--scale-back);
+              background-color: var(--primary-color);
+              svg > path {
+                fill: white;
+              }
+            }
+            transition: all 0.3s;
+            @extend .btn-tp;
+          }
+        }
+      }
+      .creators-wrapper {
+        margin-top: 60px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        justify-items: center;
+        gap: 30px;
+        li {
+          &:hover {
+            transform: var(--scale-back);
+          }
+          transition: transform 0.3s;
+          cursor: pointer;
+          width: 240px;
+          padding: 20px;
+          border-radius: 20px;
+          background-color: var(--background-secondary);
+          overflow: hidden;
+          .avatar {
+            position: relative;
+            div {
+              width: 100px;
+              height: 100px;
+              margin: 0 auto;
+              border-radius: 100px;
+              overflow: hidden;
+            }
+            span {
+              position: absolute;
+              left: 0;
+              top: 0;
+              width: 30px;
+              height: 30px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              background-color: var(--background);
+              border-radius: 100px;
+              color: #858584;
+              font-family: var(--space-font);
+            }
+          }
+          .details {
+            h4 {
+              margin-top: 20px;
+              font-size: 22px;
+              font-weight: 600;
+              line-height: 140%; /* 30.8px */
+              text-transform: capitalize;
+              text-align: center;
+            }
+            p {
+              margin-top: 5px;
+              display: flex;
+              gap: 10px;
+              align-items: center;
+              .light {
+                font-family: var(--space-font);
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 140%; /* 22.4px */
+                color: white;
+              }
+              span {
+                color: #858584;
+              }
+            }
+          }
+        }
+        .rankings {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+/* =======================================
+                    Category CSS
+============================================*/
+
+#categories {
+  .container {
+    .inner {
+      padding: 80px 0;
+      .category-wrapper {
+        margin-top: 60px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 30px;
+        li {
+          &:hover {
+            transform: var(--scale-back);
+          }
+          transition: transform 0.3s;
+          width: 240px;
+          border-radius: 20px;
+          overflow: hidden;
+          a {
+            .bg-place-holder {
+              position: relative;
+              height: 240px;
+
+              .icon {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                left: 0;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                backdrop-filter: blur(7px);
+              }
+            }
+            p {
+              padding: 20px 30px;
+              background-color: var(--background-secondary);
+              font-weight: 600;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* =======================================
+                    Discover CSS
+============================================*/
+
+#discover {
+  .container {
+    .inner {
+      padding: 80px 0;
+      .section-details {
+        display: flex;
+        justify-content: space-between;
+        .all {
+          align-self: flex-end;
+          a {
+            &:hover {
+              transform: var(--scale-back);
+              background-color: var(--primary-color);
+              svg > path {
+                fill: white;
+              }
+            }
+            transition: all 0.3s;
+            @extend .btn-tp;
+          }
+        }
+      }
+      .nft-wrapper {
+        margin-top: 60px;
+        display: flex;
+        gap: 30px;
+        li {
+          width: 330px;
+          border-radius: 20px;
+          overflow: hidden;
+          &:hover {
+            transform: var(--scale-back);
+          }
+          transition: transform 0.3s;
+          a {
+            .nft-image {
+              width: 100%;
+              height: 296px;
+            }
+            .nft-info {
+              padding: 20px 30px;
+              background-color: var(--background-secondary);
+              .author {
+                h4 {
+                  font-size: 22px;
+                  font-style: normal;
+                  font-weight: 600;
+                  line-height: 140%; /* 30.8px */
+                  text-transform: capitalize;
+                }
+                & > div {
+                  display: flex;
+                  gap: 12px;
+                  align-items: center;
+                  margin-top: 5px;
+                  margin-bottom: 25px;
+                  p {
+                    line-height: 140%; /* 22.4px */
+                    font-family: var(--space-font);
+                  }
+                  .profile {
+                    width: 24px;
+                    height: 24px;
+                    overflow: hidden;
+                    border-radius: 100px;
+                  }
+                }
+              }
+              .price {
+                display: flex;
+                justify-content: space-between;
+                .info {
+                  display: grid;
+                  span {
+                    font-family: var(--space-font);
+                    font-size: 12px;
+                    font-weight: 400;
+                    line-height: 110%; /* 13.2px */
+                    color: #858584;
+                  }
+                  .value {
+                    margin-top: 8px;
+                    color: white;
+                    font-size: 16px;
+                  }
+                }
+                .bid {
+                  text-align: right;
+                  display: grid;
+                  span {
+                    font-family: var(--space-font);
+                    font-size: 12px;
+                    font-weight: 400;
+                    line-height: 110%; /* 13.2px */
+                    color: #858584;
+                  }
+                  .value {
+                    margin-top: 8px;
+                    color: white;
+                    font-size: 16px;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .all {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+/* =======================================
+                Highlight CSS
+============================================*/
+
+#highlight {
+  background-image: url("../images/50c73503d13e1fe1a0e3277804ef1192.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  .container {
+    height: 660px;
+    .inner {
+      display: none;
+    }
+  }
+}
+
+/* =======================================
+                How it works section CSS
+============================================*/
+
+#how-it-works {
+  .container {
+    .inner {
+      padding: 80px 0;
+      .card-wrapper {
+        margin-top: 48px;
+        display: flex;
+        gap: 30px;
+        .card {
+          background-color: var(--background-secondary);
+          text-align: center;
+          padding: 30px;
+          border-radius: 20px;
+          overflow: hidden;
+          width: 330px;
+          & > div {
+            display: flex;
+            justify-content: center;
+            width: 250px;
+            height: 250px;
+            margin: 0 auto;
+          }
+          .card-text {
+            display: block;
+            h3 {
+              font-size: 22px;
+              font-style: normal;
+              font-weight: 600;
+              line-height: 140%; /* 30.8px */
+              text-transform: capitalize;
+              margin-top: 20px;
+            }
+            p {
+              text-align: center;
+              margin-top: 10px;
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 140%; /* 22.4px */
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* =======================================
+                Subscribe section CSS
+============================================*/
+
+#subscribe {
+  .container {
+    padding-top: 40px;
+    padding-bottom: 80px;
+    .inner {
+      padding: 60px;
+      background-color: var(--background-secondary);
+      border-radius: 20px;
+      display: flex;
+      gap: 80px;
+      .image {
+        width: 425px;
+        height: 310px;
+        border-radius: 20px;
+        overflow: hidden;
+        img {
+          object-fit: cover;
+        }
+      }
+      .text-content {
+        width: 425px;
+        h2 {
+          font-size: 38px;
+          line-height: 120%; /* 45.6px */
+          text-transform: capitalize;
+          font-weight: 600;
+        }
+        p {
+          font-size: 22px;
+          line-height: 160%; /* 35.2px */
+          text-transform: capitalize;
+          margin-top: 10px;
+        }
+        div {
+          form {
+            @extend .subscribe-input;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* =======================================
+                footer section CSS
+============================================*/
+
+footer {
+  background-color: var(--background-secondary);
+  .container {
+    .inner {
+      padding: 40px 0;
+      .footer-content {
+        margin-bottom: 30px;
+        display: flex;
+        justify-content: space-between;
+        .left {
+          width: 327px;
+          .logo {
+            width: 244px;
+            height: 33px;
+            margin-bottom: 30px;
+          }
+          p {
+            line-height: 140%; /* 22.4px */
+            margin-bottom: 20px;
+            color: #ccc;
+          }
+          span {
+            display: block;
+            line-height: 140%; /* 22.4px */
+            color: #ccc;
+          }
+          ul {
+            display: flex;
+            margin-top: 15px;
+            gap: 10px;
+          }
+        }
+        .center {
+          width: 240px;
+          h3 {
+            font-family: var(--space-font);
+            font-size: 22px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 160%; /* 35.2px */
+            text-transform: capitalize;
+            margin-bottom: 25px;
+          }
+          ul {
+            display: grid;
+            gap: 20px;
+            color: #ccc;
+            li a {
+              line-height: 140%; /* 22.4px */
+            }
+          }
+        }
+        .right {
+          width: 420px;
+          h3 {
+            font-family: var(--space-font);
+            font-size: 22px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 160%; /* 35.2px */
+            text-transform: capitalize;
+            margin-bottom: 25px;
+          }
+          p {
+            line-height: 140%; /* 22.4px */
+            color: #ccc;
+            margin-bottom: 20px;
+          }
+          form {
+            @extend .subscribe-input;
+          }
+        }
+      }
+      .copy-right {
+        display: flex;
+        justify-content: space-between;
+        border-top: 1px solid #858584;
+        padding-top: 20px;
+        font-size: 12px;
+        a {
+          color: var(--primary-color);
+        }
+      }
+    }
+  }
+}
